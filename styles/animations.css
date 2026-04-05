@@ -1,0 +1,25 @@
+@keyframes floatUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120px);
+    opacity: 0;
+  }
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 24px rgba(255, 105, 180, 0.85);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.4);
+  }
+}
