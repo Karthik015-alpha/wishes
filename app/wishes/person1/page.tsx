@@ -8,12 +8,7 @@ import { person1Data } from "@/data/person1";
 export const dynamic = "force-dynamic";
 
 export default function Person1Page() {
-  const birthdayDate = new Date(person1Data.birthday);
-  const openAt = new Date(birthdayDate);
-  openAt.setHours(0, 0, 0, 0);
-  const openAtTargetDate = `${openAt.getFullYear()}-${String(
-    openAt.getMonth() + 1
-  ).padStart(2, "0")}-${String(openAt.getDate()).padStart(2, "0")}T00:00:00`;
+  const openAt = new Date(person1Data.birthday);
   const closeAt = new Date(openAt.getTime() + 24 * 60 * 60 * 1000);
   const now = new Date();
 
@@ -24,7 +19,7 @@ export default function Person1Page() {
           <h1>A Little Surprise Unlocks at Midnight ✨</h1>
           <p>Come back on {openAt.toLocaleString()} to view this page.</p>
         </div>
-        <CountdownTimer targetDate={openAtTargetDate} />
+        <CountdownTimer targetDate={person1Data.birthday} />
       </main>
     );
   }
