@@ -26,5 +26,20 @@ export const person1Data: BirthdayPerson = {
       image: "/images/person1/memory3.jpg",
       caption: "Happy Birthday to my super akka, still younger than your old-school dance moves 😜🎉",
     },
+    {
+      id: 4,
+      image: "/images/person1/memory4.jpg",
+      caption: "Akka, stay this happy always... and maybe ignore when I annoy you daily 🤭🎈",
+    },
+    {
+      id: 5,
+      image: "/images/person1/memory5.jpg",
+      caption: "May your birthday be as legendary as your lectures and as sweet as extra cake 🍰😅",
+    },
+    {
+      id: 6,
+      image: "/images/person1/memory6.jpg",
+      caption: "From your little brother: more smiles, more selfies, and zero stress this year 😇🎉",
+    },
   ],
 };
