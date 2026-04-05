@@ -8,7 +8,7 @@ export const person1Data: BirthdayPerson = {
   heroImage: "/images/person1/hero.jpg",
   music: "/audio/person1.mp3",
   message:
-    "Happy Birthday Bhargavi akka 🎂✨ As your younger brother, I am so lucky to have such a caring and inspiring elder sister. May your day be filled with happiness, laughter, love, and endless beautiful memories.",
+    "Happy Birthday Bhargavi akka 🎂✨ As your younger brother, I am so lucky to have such a caring elder sister. May your day be filled with happiness, laughter, love, and endless beautiful memories.",
   route: "/wishes/person1",
   memories: [
     {
@@ -20,6 +20,8 @@ export const person1Data: BirthdayPerson = {
       id: 2,
       image: "/images/person1/memory2.jpg",
       caption: "Wishing you unlimited joy, zero stress, and extra cake I can also steal 🍰😂",
+
+
     },
     {
       id: 3,

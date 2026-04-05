@@ -32,10 +32,14 @@ export default function MemoryGallery({
       return;
     }
 
+    if (currentIndex >= memories.length - 1) {
+      return;
+    }
+
     setAnimationClass("gallery-slide-out");
 
     window.setTimeout(() => {
-      setCurrentIndex((prev) => (prev + 1) % memories.length);
+      setCurrentIndex((prev) => prev + 1);
       setAnimationClass("gallery-slide-in");
 
       window.setTimeout(() => {
@@ -59,11 +63,18 @@ export default function MemoryGallery({
             className={`gallery-slide ${animationClass}`}
             src={currentMemory.image}
             alt={currentMemory.caption}
+            onError={(e) => {
+              e.currentTarget.src = "/images/common/balloons.png";
+            }}
           />
         </button>
 
         <p className="gallery-caption">{currentMemory.caption}</p>
-        <p className="gallery-hint">Click image to see next memory</p>
+        <p className="gallery-hint">
+          {currentIndex === memories.length - 1
+            ? "Last memory reached"
+            : "Click image to see next memory"}
+        </p>
 
         <div className="gallery-dots" aria-hidden="true">
           {memories.map((memory, index) => (

@@ -2,7 +2,7 @@ import LoginForm from "@/components/LoginForm";
 
 export default function LoginPage() {
   return (
-    <main className="center-page">
+    <main className="login-page">
       <LoginForm />
     </main>
   );

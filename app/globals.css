@@ -11,7 +11,7 @@ body {
 }
 
 body {
-  background: url("/images/common/bg.png") no-repeat center center/cover;
+  background: url("/images/common/suspision.jpg") no-repeat center center/cover;
   font-family: Arial, sans-serif;
   color: #fff;
   min-height: 100vh;
@@ -45,6 +45,55 @@ img {
   border-radius: 20px;
   max-width: 700px;
   width: 100%;
+}
+
+.overlay-mystery {
+  max-width: 760px;
+  background: linear-gradient(
+    145deg,
+    rgba(7, 11, 24, 0.78),
+    rgba(20, 28, 45, 0.66)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 18px 40px rgba(6, 10, 22, 0.45);
+}
+
+.mystery-badge {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #dbeafe;
+  background: rgba(96, 165, 250, 0.2);
+}
+
+.mystery-title {
+  font-size: clamp(2rem, 4.2vw, 3rem);
+  line-height: 1.2;
+  margin-bottom: 14px;
+  color: #f8fafc;
+}
+
+.mystery-text {
+  max-width: 620px;
+  margin: 0 auto 12px;
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.overlay-mystery .main-btn {
+  margin-top: 18px;
+  background: linear-gradient(120deg, #0ea5e9, #2563eb);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.32);
+}
+
+.overlay-mystery .main-btn:hover {
+  opacity: 1;
+  transform: translateY(-2px) scale(1.02);
 }
 
 .overlay h1,
@@ -97,6 +146,63 @@ img {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 }
 
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background:
+    linear-gradient(rgba(7, 11, 24, 0.45), rgba(7, 11, 24, 0.45)),
+    url("/images/common/suspision.jpg") no-repeat center center/cover;
+  color: #0f172a;
+}
+
+.login-page .login-form {
+  width: min(92vw, 380px);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+.login-page .login-form h2 {
+  color: #0f172a;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.login-page .login-form input {
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.login-page .login-form input::placeholder {
+  color: #64748b;
+}
+
+.login-page .login-form button {
+  margin-top: 8px;
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.login-page .login-form button:hover {
+  background: #1e293b;
+}
+
+.login-page .hint {
+  color: #475569;
+  text-shadow: none;
+}
+
+.login-page .error {
+  color: #dc2626;
+}
+
 .login-form h2 {
   margin-bottom: 10px;
 }
@@ -142,6 +248,52 @@ img {
 
 .hero-content p {
   font-size: 1.1rem;
+}
+
+.person1-page {
+  min-height: 100vh;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background-image: url("/images/common/bg.png") !important;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+body:has(.person1-page) {
+  background-image: none;
+}
+
+.person1-page::before,
+.person1-page::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.person1-page::before {
+  top: 0;
+  right: 0;
+  width: min(56vw, 760px);
+  height: min(62vh, 620px);
+  background: url("/images/common/balloons.png") no-repeat top right / contain;
+  opacity: 0.14;
+}
+
+.person1-page::after {
+  right: 18px;
+  bottom: 24px;
+  width: min(16vw, 180px);
+  height: min(22vh, 200px);
+  background: url("/images/common/cake.png") no-repeat center / contain;
+  opacity: 0.2;
+}
+
+.person1-page > * {
+  position: relative;
+  z-index: 1;
 }
 
 .countdown-section,
@@ -423,6 +575,20 @@ img {
   .gallery-card {
     width: 100%;
     max-width: 320px;
+  }
+
+  .person1-page::before {
+    width: min(78vw, 460px);
+    height: min(44vh, 320px);
+    opacity: 0.16;
+  }
+
+  .person1-page::after {
+    right: 10px;
+    bottom: 12px;
+    width: min(28vw, 120px);
+    height: min(16vh, 110px);
+    opacity: 0.24;
   }
 
   .gallery-slide {

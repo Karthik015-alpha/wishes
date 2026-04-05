@@ -26,25 +26,23 @@ export default function LoginForm() {
 
   return (
     <form className="login-form" onSubmit={handleLogin}>
-      <h2>Login to Open Wishes 🎁</h2>
+      <h2>Secret Club Entry 😎</h2>
 
       <input
         type="text"
-        placeholder="Enter username"
+        placeholder="Mee peru"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
 
       <input
         type="password"
-        placeholder="Enter password"
+        placeholder="Manthram Cheppandi"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
 
-      <button type="submit">Login</button>
-
-      <p className="hint">Use VB6 / yourbrotherisinnocent or person2 / 5678</p>
+      <button type="submit">Open Sesame 🚪</button>
 
       {error && <p className="error">{error}</p>}
     </form>
