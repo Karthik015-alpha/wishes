@@ -4,7 +4,7 @@ export const person1Data: BirthdayPerson = {
   username: "VB6",
   password: "yourbrotherisinnocent",
   name: "Bhargavi",
-  birthday: "2026-04-05T00:00:00",
+  birthday: "2026-04-06T00:00:00",
   heroImage: "/images/person1/hero.jpg",
   music: "/audio/person1.mp3",
   message:
