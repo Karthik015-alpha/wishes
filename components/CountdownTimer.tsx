@@ -34,22 +34,22 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
         justifyContent: "center",
       }}
     >
-      <h2>Countdown 🎉</h2>
+      <h2>Thoda wait karo</h2>
       <div className="countdown-box" style={{ gap: "40px" }}>
         <div style={{ background: "transparent", backdropFilter: "none", padding: "10px" }}>
-          <span style={{ fontSize: "3rem", fontWeight: "bold", color: "#fff" }}>{timeLeft.days}</span>
+          <span style={{ fontSize: "3rem", fontWeight: "bold", color: "#000" }}>{timeLeft.days}</span>
           <p>Days</p>
         </div>
         <div style={{ background: "transparent", backdropFilter: "none", padding: "10px" }}>
-          <span style={{ fontSize: "3rem", fontWeight: "bold", color: "#fff" }}>{timeLeft.hours}</span>
+          <span style={{ fontSize: "3rem", fontWeight: "bold", color: "#000" }}>{timeLeft.hours}</span>
           <p>Hours</p>
         </div>
         <div style={{ background: "transparent", backdropFilter: "none", padding: "10px" }}>
-          <span style={{ fontSize: "3rem", fontWeight: "bold", color: "#fff" }}>{timeLeft.minutes}</span>
+          <span style={{ fontSize: "3rem", fontWeight: "bold", color: "#000" }}>{timeLeft.minutes}</span>
           <p>Minutes</p>
         </div>
         <div style={{ background: "transparent", backdropFilter: "none", padding: "10px" }}>
-          <span style={{ fontSize: "3rem", fontWeight: "bold", color: "#fff" }}>{timeLeft.seconds}</span>
+          <span style={{ fontSize: "3rem", fontWeight: "bold", color: "#000" }}>{timeLeft.seconds}</span>
           <p>Seconds</p>
         </div>
       </div>
