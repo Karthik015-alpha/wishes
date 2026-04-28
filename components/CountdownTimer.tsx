@@ -19,23 +19,37 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
   }, [targetDate]);
 
   return (
-    <section className="countdown-section">
+    <section 
+      className="countdown-section"
+      style={{
+        backgroundImage: "url('/images/common/suspision.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundColor: "transparent",
+        padding: 0,
+        minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <h2>Countdown 🎉</h2>
-      <div className="countdown-box">
-        <div>
-          <span>{timeLeft.days}</span>
+      <div className="countdown-box" style={{ gap: "40px" }}>
+        <div style={{ background: "transparent", backdropFilter: "none", padding: "10px" }}>
+          <span style={{ fontSize: "3rem", fontWeight: "bold", color: "#fff" }}>{timeLeft.days}</span>
           <p>Days</p>
         </div>
-        <div>
-          <span>{timeLeft.hours}</span>
+        <div style={{ background: "transparent", backdropFilter: "none", padding: "10px" }}>
+          <span style={{ fontSize: "3rem", fontWeight: "bold", color: "#fff" }}>{timeLeft.hours}</span>
           <p>Hours</p>
         </div>
-        <div>
-          <span>{timeLeft.minutes}</span>
+        <div style={{ background: "transparent", backdropFilter: "none", padding: "10px" }}>
+          <span style={{ fontSize: "3rem", fontWeight: "bold", color: "#fff" }}>{timeLeft.minutes}</span>
           <p>Minutes</p>
         </div>
-        <div>
-          <span>{timeLeft.seconds}</span>
+        <div style={{ background: "transparent", backdropFilter: "none", padding: "10px" }}>
+          <span style={{ fontSize: "3rem", fontWeight: "bold", color: "#fff" }}>{timeLeft.seconds}</span>
           <p>Seconds</p>
         </div>
       </div>

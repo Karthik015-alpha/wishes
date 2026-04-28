@@ -250,7 +250,8 @@ img {
   font-size: 1.1rem;
 }
 
-.person1-page {
+
+.person2-page {
   min-height: 100vh;
   position: relative;
   isolation: isolate;
@@ -259,6 +260,42 @@ img {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+}
+
+body:has(.person2-page) {
+  background-image: none;
+}
+
+.person2-page::before,
+.person2-page::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.person2-page::before {
+  top: 0;
+  right: 0;
+  width: min(56vw, 760px);
+  height: min(62vh, 620px);
+  background: url("/images/common/balloons.png") no-repeat top right / contain;
+  opacity: 0.14;
+}
+
+.person2-page::after {
+  right: 18px;
+  bottom: 24px;
+  width: min(16vw, 180px);
+  height: min(22vh, 200px);
+  background: url("/images/common/cake.png") no-repeat center / contain;
+  opacity: 0.2;
+}
+
+
+.person2-page > * {
+  position: relative;
+  z-index: 1;
 }
 
 body:has(.person1-page) {

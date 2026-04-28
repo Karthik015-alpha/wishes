@@ -5,8 +5,8 @@ export const users = [
     redirect: "/wishes/person1",
   },
   {
-    username: "person2",
-    password: "5678",
+    username: "Siri",
+    password: "Mybrotherisinnocent",
     redirect: "/wishes/person2",
   },
 ];
